@@ -1,4 +1,75 @@
-body {
-	background-image: url('images/main-background.jpg');
-	background-color: #000000;
+* {
+	box-sizing: border-box;
+	-webkit-font-smoothing: antialiased;
+	margin: 0;
+	padding: 0;
 }
+
+body {
+	background-image: url('../images/main-background.jpg');
+	background-size: cover;
+	background-repeat: no-repeat; 
+	background-color: black;
+}
+
+p {
+	color: white;
+	font-family: 'Cambay', sans-serif;
+	font-size: 1.125em;
+}
+
+.title {
+	margin: 0 auto;
+	text-align: center;
+	padding: 3.75em;
+}
+
+h1 {
+	color: #fafe4f;
+	font-family: 'Racing Sans One', cursive;
+	font-size: 3em;
+	padding-bottom: .25em;
+}
+
+.submit-btn {
+	font-family: 'Cambay', sans-serif;
+	font-weight: bold;
+	font-size: 1.125em;
+	text-transform: uppercase;
+	color: white;
+	background-color: #f2bc1a;
+	border: 1px solid #f2d264;
+	width: 100px;
+	height: 40px;
+	border-radius: 3px 3px 3px 3px;
+	-moz-border-radius: 3px 3px 3px 3px;
+	-webkit-border-radius: 3px 3px 3px 3px;
+	padding-top: 4px;
+}
+
+.questions-container {
+	margin: 0 auto;
+	background-color: #d2421f;
+	border: 2px solid #e5583c;
+	width: 60%;
+	border-radius: 3px 3px 3px 3px;
+	-moz-border-radius: 3px 3px 3px 3px;
+	-webkit-border-radius: 3px 3px 3px 3px;
+}
+
+.answers-container {
+	margin: 0 auto;
+	background-color: white;
+	border: 1px solid #e5583c;
+	width: 90%;
+	border-radius: 3px 3px 3px 3px;
+	-moz-border-radius: 3px 3px 3px 3px;
+	-webkit-border-radius: 3px 3px 3px 3px;
+}
+
+hr {
+	border: 0;
+	height: 0;
+	border-top: 1px solid rgba(229,88,60,.2); 
+}
+
