@@ -31,6 +31,60 @@ h1 {
 	padding-bottom: .25em;
 }
 
+.content-container {
+	margin: 0 auto;
+	width: 90%;
+}
+
+.question {
+	padding: 1em 0;
+}
+
+.questions-container {
+	margin: 0 auto;
+	background-color: #d2421f;
+	border: 2px solid #e5583c;
+	width: 60%;
+	border-radius: 3px 3px 3px 3px;
+	-moz-border-radius: 3px 3px 3px 3px;
+	-webkit-border-radius: 3px 3px 3px 3px;
+	position: relative;
+}
+
+.answers-container {
+	margin: 0 auto;
+	background-color: white;
+	border: 1px solid #e5583c;
+	border-radius: 3px 3px 3px 3px;
+	-moz-border-radius: 3px 3px 3px 3px;
+	-webkit-border-radius: 3px 3px 3px 3px;
+}
+
+.answers-container p {
+	color: #e5583c;
+	font-size: 1.5em;
+}
+
+.letter {
+	text-align: center;
+	line-height: 2.2em;
+	color: #e5583c;
+	font-size: 1.5em;
+	font-weight: bold;
+	width: 2em;
+	height: 2em;
+	border: 2px solid #e5583c;
+	border-radius: 2em;
+	margin-left: 1em;
+	margin-top: .75em;
+}
+
+hr {
+	border: 0;
+	height: 0;
+	border-top: 1px solid rgba(229,88,60,.2); 
+}
+
 .submit-btn {
 	font-family: 'Cambay', sans-serif;
 	font-weight: bold;
@@ -47,29 +101,32 @@ h1 {
 	padding-top: 4px;
 }
 
-.questions-container {
-	margin: 0 auto;
-	background-color: #d2421f;
-	border: 2px solid #e5583c;
-	width: 60%;
-	border-radius: 3px 3px 3px 3px;
-	-moz-border-radius: 3px 3px 3px 3px;
-	-webkit-border-radius: 3px 3px 3px 3px;
+.question-number {
+	position: absolute;
+	right: -2em;
+	top: 48%;
+	transform: translateY(-50%); 
 }
 
-.answers-container {
-	margin: 0 auto;
+.question-number li {
+	font-family: 'Cambay', sans-serif;
+	font-weight: bold;
+	font-size: 1.875em;
+	font-weight: bold;
+	text-align: center;
+	line-height: 1.5em;
+	color: #e5583c;
 	background-color: white;
-	border: 1px solid #e5583c;
-	width: 90%;
-	border-radius: 3px 3px 3px 3px;
-	-moz-border-radius: 3px 3px 3px 3px;
-	-webkit-border-radius: 3px 3px 3px 3px;
+	width: 1.5em;
+	height: 1.5em;
+	border: 2px solid #e5583c;
+	border-radius: 2em;
+	margin: .25em;
 }
 
-hr {
-	border: 0;
-	height: 0;
-	border-top: 1px solid rgba(229,88,60,.2); 
+.question-number li:first-of-type {
+	color: white;
+	background-color: #f2bc1a;
+	border: 2px solid #f2d264;
+	border-radius: 2em;
 }
-
