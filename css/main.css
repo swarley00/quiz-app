@@ -65,6 +65,7 @@ h1 {
 .answers-container p {
 	color: #e5583c;
 	font-size: 1.5em;
+	position: relative;
 }
 
 .letter {
@@ -79,6 +80,11 @@ h1 {
 	border-radius: 2em;
 	margin-left: 1em;
 	margin-top: .75em;
+}
+
+.answer {
+	left: 4em;
+	bottom: 1.5em;
 }
 
 hr {
