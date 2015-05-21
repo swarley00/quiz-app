@@ -37,7 +37,9 @@ h1 {
 }
 
 .question {
-	padding: 1em 0;
+	padding: .75em 0;
+	font-size: 1.750em;
+	text-shadow: 2px 2px 4px rgba(36, 10, 5, .4);
 }
 
 .questions-container {
@@ -99,6 +101,7 @@ hr {
 	-moz-border-radius: 3px 3px 3px 3px;
 	-webkit-border-radius: 3px 3px 3px 3px;
 	padding-top: 4px;
+	margin: 1.75em 0;
 }
 
 .question-number {
