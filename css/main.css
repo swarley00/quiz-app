@@ -80,6 +80,12 @@ h1::before {
 	position: relative;
 }
 
+.hover:hover p {
+	color: #a31416;
+	border-color: #a31416;
+	cursor: pointer;
+}
+
 .letter {
 	text-align: center;
 	line-height: 2.2em;
@@ -123,7 +129,7 @@ hr {
 }
 
 .submit-btn:hover {
-	color: #f2d264;
+	color: white;
 	background-color: #dd901a;
 	cursor: pointer;
 }
