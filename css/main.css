@@ -169,7 +169,52 @@ hr {
 
 /**** Pop-up Box and Faded Background ****/
 
+.overlay-container {
+	display: none;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0, 0, 0, .9);
+	background-blend-mode: multiply;
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 1;
+}
 
+.pop-out {
+	position: relative;
+	margin: 0 auto;
+	width: 60%;
+	padding: 5em;
+	background-color: white;
+	border: 2px solid #e5583c; 
+	border-radius: 3px 3px 3px 3px;
+	-moz-border-radius: 3px 3px 3px 3px;
+	-webkit-border-radius: 3px 3px 3px 3px;
+	top: 50%;
+	transform: translateY(-50%);
+}
 
+.copy {
+	position: absolute;
+	left: 27.3em;
+	bottom: 3.3em;
+	padding-right: 3em; 
+}
 
+.copy p {
+	color: #808080;
+	font-size: 0.875em;
+	line-height: 1.25em;
+	margin-top: .8em;
+}
 
+h2 {
+	color: #e5583c;
+	font-family: 'Cambay', sans-serif;
+	font-size: 2.250em;
+}
+
+.pop-out .next {
+	margin-top: 1.2em;
+}
