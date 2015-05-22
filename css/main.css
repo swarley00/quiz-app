@@ -25,10 +25,22 @@ p {
 }
 
 h1 {
-	color: #fafe4f;
+	position: relative;
+	color: #fbec51;
 	font-family: 'Racing Sans One', cursive;
-	font-size: 3em;
+	font-size: 4em;
 	padding-bottom: .25em;
+	background: -webkit-linear-gradient(#fbec51, #fcfeb7, #fbec51);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+}
+
+h1::before {
+	content: 'The Flash Quiz';
+	text-align: center;
+	-webkit-text-stroke: #e5583c 2px;
+	position: absolute;
+	z-index: -1;
 }
 
 .content-container {
@@ -84,7 +96,7 @@ h1 {
 
 .answer {
 	left: 4em;
-	bottom: 1.5em;
+	bottom: 1.3em;
 }
 
 hr {
@@ -106,8 +118,14 @@ hr {
 	border-radius: 3px 3px 3px 3px;
 	-moz-border-radius: 3px 3px 3px 3px;
 	-webkit-border-radius: 3px 3px 3px 3px;
-	padding-top: 4px;
+	padding-top: 5px;
 	margin: 1.75em 0;
+}
+
+.submit-btn:hover {
+	color: #f2d264;
+	background-color: #dd901a;
+	cursor: pointer;
 }
 
 .question-number {
