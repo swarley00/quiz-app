@@ -56,7 +56,7 @@ h1::before {
 
 .questions-container {
 	margin: 0 auto;
-	background-image: url('../images/questions-background.jpg');
+	background-image: url('../images/questions-background.png');
 	background-color: #d2421f;
 	background-blend-mode: multiply;
 	background-size: cover;
@@ -114,7 +114,7 @@ hr {
 	border-top: 1px solid rgba(229,88,60,.2); 
 }
 
-.submit-btn {
+.button {
 	font-family: 'Cambay', sans-serif;
 	font-weight: bold;
 	font-size: 1.125em;
@@ -131,7 +131,7 @@ hr {
 	margin: 1.75em 0;
 }
 
-.submit-btn:hover {
+.button:hover {
 	color: white;
 	background-color: #dd901a;
 	cursor: pointer;
@@ -166,3 +166,10 @@ hr {
 	border: 2px solid #f2d264;
 	border-radius: 2em;
 }
+
+/**** Pop-up Box and Faded Background ****/
+
+
+
+
+
