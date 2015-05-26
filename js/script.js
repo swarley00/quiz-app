@@ -23,14 +23,14 @@ $(document).ready(function() {
 		console.log(this);
 	});
 
-	// $(#submitBtn).click(function() {
-	// 	if (.) {
-
-	// 	}
-	// 	else {
-
-	// 	} 
-	// })
+	$('#submitBtn').click(function() {
+		if ($('.selected').is('.answer')) {
+			console.log('correct');
+		}
+		else {
+			console.log('incorrect');
+		} 
+	});
 
 	// $('.question').text(question2.question);
 	// $('.answer').text(question2.answer);
