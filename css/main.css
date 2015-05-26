@@ -62,6 +62,7 @@ h1::before {
 	background-size: cover;
 	border: 2px solid #e5583c;
 	width: 60%;
+	min-width: 55em;
 	border-radius: 3px 3px 3px 3px;
 	-moz-border-radius: 3px 3px 3px 3px;
 	-webkit-border-radius: 3px 3px 3px 3px;
@@ -103,7 +104,7 @@ h1::before {
 	margin-top: .75em;
 }
 
-.answer {
+.answer, .wronganswer1, .wronganswer2, .wronganswer3  {
 	left: 4em;
 	bottom: 1.3em;
 }
@@ -185,6 +186,7 @@ hr {
 	position: relative;
 	margin: 0 auto;
 	width: 60%;
+	min-width: 55em;
 	padding: 5em;
 	background-color: white;
 	border: 2px solid #e5583c; 
