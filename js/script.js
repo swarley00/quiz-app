@@ -6,11 +6,6 @@ $(document).ready(function() {
 	}
 
 	var question1 = new QuizItem ('How does Barry Allen gain his powers?', 'Struck By Lightning', ['Kryptonite', 'An Alien Ring', 'Lab Experiments']);
-	var question2 = new QuizItem ('What comic did Barry first appear in?', 'Showcase #4', ['Flash Comics #1', 'Superman #199', 'Flash #167']);
-	var question3 = new QuizItem ("Who is Barry's archenemy?", 'Reverse-Flash', ['Captain Cold', 'The Joker', 'Sinestro']);
-	var question4 = new QuizItem ('In what storyline does Barry die?', 'Crisis on Infinite Earths', ['Final Crisis', 'Flash: Rebirth', 'Flashpoint']);
-	var question5 = new QuizItem ('In what publication year did Barry return to the DCU?', '2008', ['1976', '2004', '2012']);
-	// var randomArray = [Math.floor(Math.random()*question1.wrongAnswers.length)];
 	
 	$('.question').text(question1.question);
 	$('.answer').text(question1.answer);
@@ -25,13 +20,25 @@ $(document).ready(function() {
 
 	$('#submitBtn').click(function() {
 		if ($('.selected').is('.answer')) {
+			$('.overlay-container').show();
 			console.log('correct');
+			$('#nextBtn').click(function() {
+				$('.overlay-container').hide();
+			});
 		}
 		else {
 			console.log('incorrect');
 		} 
 	});
+});
 
+	// var question2 = new QuizItem ('What comic did Barry first appear in?', 'Showcase #4', ['Flash Comics #1', 'Superman #199', 'Flash #167']);
+	// var question3 = new QuizItem ("Who is Barry's archenemy?", 'Reverse-Flash', ['Captain Cold', 'The Joker', 'Sinestro']);
+	// var question4 = new QuizItem ('In what storyline does Barry die?', 'Crisis on Infinite Earths', ['Final Crisis', 'Flash: Rebirth', 'Flashpoint']);
+	// var question5 = new QuizItem ('In what publication year did Barry return to the DCU?', '2008', ['1976', '2004', '2012']);
+
+	// var randomArray = [Math.floor(Math.random()*question1.wrongAnswers.length)];
+	
 	// $('.question').text(question2.question);
 	// $('.answer').text(question2.answer);
 	// $('.wronganswer1').text(question2.wrongAnswers[0]);
@@ -55,4 +62,11 @@ $(document).ready(function() {
 	// $('.wronganswer1').text(question5.wrongAnswers[0]);
 	// $('.wronganswer2').text(question5.wrongAnswers[1]);
 	// $('.wronganswer3').text(question5.wrongAnswers[2]);
-});
+
+	// function PopUp (image, headline, bodycopy) {
+	// 	this.image = image;
+	// 	this.headline = headline;
+	// 	this.bodycopy = bodycopy;
+	// } 
+
+	// var popup1 = new PopUp ();
