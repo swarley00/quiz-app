@@ -90,6 +90,11 @@ h1::before {
 	cursor: pointer;
 }
 
+.answers-container .selected {
+	color: #a31416;
+	border-color: #a31416;
+}
+
 .letter {
 	text-align: center;
 	line-height: 2.2em;
