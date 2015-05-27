@@ -166,7 +166,7 @@ hr {
 	margin: .25em;
 }
 
-.question-number li:first-of-type {
+.question-number li:first-child {
 	color: white;
 	background-color: #f2bc1a;
 	border: 2px solid #f2d264;

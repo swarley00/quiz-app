@@ -24,10 +24,25 @@ $(document).ready(function() {
 			console.log('correct');
 			$('#nextBtn').click(function() {
 				$('.overlay-container').hide();
+				$('.question-number').find('li:nth-child(2)').css({
+					'color': 'white',
+					'background-color': '#f2bc1a',
+					'border': '2px solid #f2d264',
+					'border-radius': '2em'});
 			});
 		}
 		else {
+			$('.overlay-container').show();
+			$('h2').text('You Were So Close...');
 			console.log('incorrect');
+			$('#nextBtn').click(function() {
+				$('.overlay-container').hide();
+				$('.question-number').find('li:nth-child(2)').css({
+					'color': 'white',
+					'background-color': '#f2bc1a',
+					'border': '2px solid #f2d264',
+					'border-radius': '2em'});
+			});
 		} 
 	});
 });
