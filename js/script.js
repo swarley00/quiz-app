@@ -1,6 +1,10 @@
 $(document).ready(function() {
 	Question1();
 
+	$('li').click(function() {
+		$(this).closest('li').find('p').toggleClass('selected');
+	});	
+
 	function QuizItem (question, answer, wrongAnswers) {
 		this.question = question;
 		this.answer = answer;
@@ -19,7 +23,6 @@ $(document).ready(function() {
 		$('#submitBtn').click(function() {
 			if ($('.selected').is('.answer')) {
 				$('.overlay-container').show();
-				console.log('correct');
 				$('#nextBtn').click(function() {
 					$('.overlay-container').hide();
 					$('.question-number').find('li:nth-child(2)').css({
@@ -33,7 +36,6 @@ $(document).ready(function() {
 			else {
 				$('.overlay-container').show();
 				$('h2').text('You Were So Close...');
-				console.log('incorrect');
 				$('#nextBtn').click(function() {
 					$('.overlay-container').hide();
 					$('.question-number').find('li:nth-child(2)').css({
@@ -48,6 +50,10 @@ $(document).ready(function() {
 	}
 
 	function Question2 () {
+		if ($('p').is('.selected')) {
+			$('p').toggleClass('.selected');
+		}
+
 		var question2 = new QuizItem ('What comic did Barry first appear in?', 'Showcase #4', ['Flash Comics #1', 'Superman #199', 'Flash #167']);
 
 		$('.question').text(question2.question);
@@ -59,7 +65,6 @@ $(document).ready(function() {
 		$('#submitBtn').click(function() {
 			if ($('.selected').is('.answer')) {
 				$('.overlay-container').show();
-				console.log('correct');
 				$('#nextBtn').click(function() {
 					$('.overlay-container').hide();
 					$('.question-number').find('li:nth-child(3)').css({
@@ -73,7 +78,6 @@ $(document).ready(function() {
 			else {
 				$('.overlay-container').show();
 				$('h2').text('You Were So Close...');
-				console.log('incorrect');
 				$('#nextBtn').click(function() {
 					$('.overlay-container').hide();
 					$('.question-number').find('li:nth-child(3)').css({
@@ -99,7 +103,6 @@ $(document).ready(function() {
 		$('#submitBtn').click(function() {
 			if ($('.selected').is('.answer')) {
 				$('.overlay-container').show();
-				console.log('correct');
 				$('#nextBtn').click(function() {
 					$('.overlay-container').hide();
 					$('.question-number').find('li:nth-child(4)').css({
@@ -113,7 +116,6 @@ $(document).ready(function() {
 			else {
 				$('.overlay-container').show();
 				$('h2').text('You Were So Close...');
-				console.log('incorrect');
 				$('#nextBtn').click(function() {
 					$('.overlay-container').hide();
 					$('.question-number').find('li:nth-child(4)').css({
@@ -139,7 +141,6 @@ $(document).ready(function() {
 		$('#submitBtn').click(function() {
 			if ($('.selected').is('.answer')) {
 				$('.overlay-container').show();
-				console.log('correct');
 				$('#nextBtn').click(function() {
 					$('.overlay-container').hide();
 					$('.question-number').find('li:nth-child(5)').css({
@@ -153,7 +154,6 @@ $(document).ready(function() {
 			else {
 				$('.overlay-container').show();
 				$('h2').text('You Were So Close...');
-				console.log('incorrect');
 				$('#nextBtn').click(function() {
 					$('.overlay-container').hide();
 					$('.question-number').find('li:nth-child(5)').css({
@@ -179,7 +179,6 @@ $(document).ready(function() {
 		$('#submitBtn').click(function() {
 			if ($('.selected').is('.answer')) {
 				$('.overlay-container').show();
-				console.log('correct');
 				$('#nextBtn').click(function() {
 					$('.overlay-container').hide();
 					$('.question-number').find('li:nth-child(5)').css({
@@ -192,7 +191,6 @@ $(document).ready(function() {
 			else {
 				$('.overlay-container').show();
 				$('h2').text('You Were So Close...');
-				console.log('incorrect');
 				$('#nextBtn').click(function() {
 					$('.overlay-container').hide();
 					$('.question-number').find('li:nth-child(5)').css({
@@ -204,11 +202,6 @@ $(document).ready(function() {
 			} 
 		});
 	}
-
-	$('li').click(function() {
-		$(this).closest('li').find('p').toggleClass('selected');
-		console.log(this);
-	});	
 });
 
 	// var randomArray = [Math.floor(Math.random()*question1.wrongAnswers.length)];
