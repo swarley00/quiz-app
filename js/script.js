@@ -1,65 +1,72 @@
 $(document).ready(function() {
+	Question1();
+
 	function QuizItem (question, answer, wrongAnswers) {
 		this.question = question;
 		this.answer = answer;
 		this.wrongAnswers = wrongAnswers;
 	}
 
-	var question1 = new QuizItem ('How does Barry Allen gain his powers?', 'Struck By Lightning', ['Kryptonite', 'An Alien Ring', 'Lab Experiments']);
+	function Question1 () {
+		var question1 = new QuizItem ('How does Barry Allen gain his powers?', 'Struck By Lightning', ['Kryptonite', 'An Alien Ring', 'Lab Experiments']);
 	
-	$('.question').text(question1.question);
-	$('.answer').text(question1.answer);
-	$('.wronganswer1').text(question1.wrongAnswers[0]);
-	$('.wronganswer2').text(question1.wrongAnswers[1]);
-	$('.wronganswer3').text(question1.wrongAnswers[2]);
+		$('.question').text(question1.question);
+		$('.answer').text(question1.answer);
+		$('.wronganswer1').text(question1.wrongAnswers[0]);
+		$('.wronganswer2').text(question1.wrongAnswers[1]);
+		$('.wronganswer3').text(question1.wrongAnswers[2]);
+
+		$('#submitBtn').click(function() {
+			if ($('.selected').is('.answer')) {
+				$('.overlay-container').show();
+				console.log('correct');
+				$('#nextBtn').click(function() {
+					$('.overlay-container').hide();
+					$('.question-number').find('li:nth-child(2)').css({
+						'color': 'white',
+						'background-color': '#f2bc1a',
+						'border': '2px solid #f2d264',
+						'border-radius': '2em'});
+					Question2();
+				});
+			}
+			else {
+				$('.overlay-container').show();
+				$('h2').text('You Were So Close...');
+				console.log('incorrect');
+				$('#nextBtn').click(function() {
+					$('.overlay-container').hide();
+					$('.question-number').find('li:nth-child(2)').css({
+						'color': 'white',
+						'background-color': '#f2bc1a',
+						'border': '2px solid #f2d264',
+						'border-radius': '2em'});
+				});
+			} 
+		});
+	}
+
+	function Question2 () {
+		var question2 = new QuizItem ('What comic did Barry first appear in?', 'Showcase #4', ['Flash Comics #1', 'Superman #199', 'Flash #167']);
+
+		$('.question').text(question2.question);
+		$('.answer').text(question2.answer);
+		$('.wronganswer1').text(question2.wrongAnswers[0]);
+		$('.wronganswer2').text(question2.wrongAnswers[1]);
+		$('.wronganswer3').text(question2.wrongAnswers[2]);
+	}
 
 	$('li').click(function() {
 		$(this).closest('li').find('p').toggleClass('selected');
 		console.log(this);
-	});
-
-	$('#submitBtn').click(function() {
-		if ($('.selected').is('.answer')) {
-			$('.overlay-container').show();
-			console.log('correct');
-			$('#nextBtn').click(function() {
-				$('.overlay-container').hide();
-				$('.question-number').find('li:nth-child(2)').css({
-					'color': 'white',
-					'background-color': '#f2bc1a',
-					'border': '2px solid #f2d264',
-					'border-radius': '2em'});
-			});
-		}
-		else {
-			$('.overlay-container').show();
-			$('h2').text('You Were So Close...');
-			console.log('incorrect');
-			$('#nextBtn').click(function() {
-				$('.overlay-container').hide();
-				$('.question-number').find('li:nth-child(2)').css({
-					'color': 'white',
-					'background-color': '#f2bc1a',
-					'border': '2px solid #f2d264',
-					'border-radius': '2em'});
-			});
-		} 
-	});
+	});	
 });
-
-	// var question2 = new QuizItem ('What comic did Barry first appear in?', 'Showcase #4', ['Flash Comics #1', 'Superman #199', 'Flash #167']);
 	// var question3 = new QuizItem ("Who is Barry's archenemy?", 'Reverse-Flash', ['Captain Cold', 'The Joker', 'Sinestro']);
 	// var question4 = new QuizItem ('In what storyline does Barry die?', 'Crisis on Infinite Earths', ['Final Crisis', 'Flash: Rebirth', 'Flashpoint']);
 	// var question5 = new QuizItem ('In what publication year did Barry return to the DCU?', '2008', ['1976', '2004', '2012']);
 
 	// var randomArray = [Math.floor(Math.random()*question1.wrongAnswers.length)];
 	
-	// $('.question').text(question2.question);
-	// $('.answer').text(question2.answer);
-	// $('.wronganswer1').text(question2.wrongAnswers[0]);
-	// $('.wronganswer2').text(question2.wrongAnswers[1]);
-	// $('.wronganswer3').text(question2.wrongAnswers[2]);
-
 	// $('.question').text(question3.question);
 	// $('.answer').text(question3.answer);
 	// $('.wronganswer1').text(question3.wrongAnswers[0]);
