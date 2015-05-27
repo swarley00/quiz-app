@@ -41,6 +41,7 @@ $(document).ready(function() {
 						'background-color': '#f2bc1a',
 						'border': '2px solid #f2d264',
 						'border-radius': '2em'});
+					Question2();
 				});
 			} 
 		});
@@ -54,6 +55,154 @@ $(document).ready(function() {
 		$('.wronganswer1').text(question2.wrongAnswers[0]);
 		$('.wronganswer2').text(question2.wrongAnswers[1]);
 		$('.wronganswer3').text(question2.wrongAnswers[2]);
+
+		$('#submitBtn').click(function() {
+			if ($('.selected').is('.answer')) {
+				$('.overlay-container').show();
+				console.log('correct');
+				$('#nextBtn').click(function() {
+					$('.overlay-container').hide();
+					$('.question-number').find('li:nth-child(3)').css({
+						'color': 'white',
+						'background-color': '#f2bc1a',
+						'border': '2px solid #f2d264',
+						'border-radius': '2em'});
+					Question3();
+				});
+			}
+			else {
+				$('.overlay-container').show();
+				$('h2').text('You Were So Close...');
+				console.log('incorrect');
+				$('#nextBtn').click(function() {
+					$('.overlay-container').hide();
+					$('.question-number').find('li:nth-child(3)').css({
+						'color': 'white',
+						'background-color': '#f2bc1a',
+						'border': '2px solid #f2d264',
+						'border-radius': '2em'});
+					Question3();
+				});
+			} 
+		});
+	}
+
+	function Question3 () {
+		var question3 = new QuizItem ("Who is Barry's archenemy?", 'Reverse-Flash', ['Captain Cold', 'Joker', 'Sinestro']);
+
+		$('.question').text(question3.question);
+		$('.answer').text(question3.answer);
+		$('.wronganswer1').text(question3.wrongAnswers[0]);
+		$('.wronganswer2').text(question3.wrongAnswers[1]);
+		$('.wronganswer3').text(question3.wrongAnswers[2]);
+
+		$('#submitBtn').click(function() {
+			if ($('.selected').is('.answer')) {
+				$('.overlay-container').show();
+				console.log('correct');
+				$('#nextBtn').click(function() {
+					$('.overlay-container').hide();
+					$('.question-number').find('li:nth-child(4)').css({
+						'color': 'white',
+						'background-color': '#f2bc1a',
+						'border': '2px solid #f2d264',
+						'border-radius': '2em'});
+					Question4();
+				});
+			}
+			else {
+				$('.overlay-container').show();
+				$('h2').text('You Were So Close...');
+				console.log('incorrect');
+				$('#nextBtn').click(function() {
+					$('.overlay-container').hide();
+					$('.question-number').find('li:nth-child(4)').css({
+						'color': 'white',
+						'background-color': '#f2bc1a',
+						'border': '2px solid #f2d264',
+						'border-radius': '2em'});
+					Question4();
+				});
+			} 
+		});
+	}
+
+	function Question4 () {
+		var question4 = new QuizItem ('In what storyline does Barry die?', 'Crisis on Infinite Earths', ['Final Crisis', 'Flash: Rebirth', 'Flashpoint']);
+
+		$('.question').text(question4.question);
+		$('.answer').text(question4.answer);
+		$('.wronganswer1').text(question4.wrongAnswers[0]);
+		$('.wronganswer2').text(question4.wrongAnswers[1]);
+		$('.wronganswer3').text(question4.wrongAnswers[2]);	
+
+		$('#submitBtn').click(function() {
+			if ($('.selected').is('.answer')) {
+				$('.overlay-container').show();
+				console.log('correct');
+				$('#nextBtn').click(function() {
+					$('.overlay-container').hide();
+					$('.question-number').find('li:nth-child(5)').css({
+						'color': 'white',
+						'background-color': '#f2bc1a',
+						'border': '2px solid #f2d264',
+						'border-radius': '2em'});
+					Question5();
+				});
+			}
+			else {
+				$('.overlay-container').show();
+				$('h2').text('You Were So Close...');
+				console.log('incorrect');
+				$('#nextBtn').click(function() {
+					$('.overlay-container').hide();
+					$('.question-number').find('li:nth-child(5)').css({
+						'color': 'white',
+						'background-color': '#f2bc1a',
+						'border': '2px solid #f2d264',
+						'border-radius': '2em'});
+					Question5();
+				});
+			} 
+		});
+	}
+
+	function Question5 () {
+		var question5 = new QuizItem ('In what publication year did Barry return to the DCU?', '2008', ['1976', '2004', '2012']);
+
+		$('.question').text(question5.question);
+		$('.answer').text(question5.answer);
+		$('.wronganswer1').text(question5.wrongAnswers[0]);
+		$('.wronganswer2').text(question5.wrongAnswers[1]);
+		$('.wronganswer3').text(question5.wrongAnswers[2]);
+
+		$('#submitBtn').click(function() {
+			if ($('.selected').is('.answer')) {
+				$('.overlay-container').show();
+				console.log('correct');
+				$('#nextBtn').click(function() {
+					$('.overlay-container').hide();
+					$('.question-number').find('li:nth-child(5)').css({
+						'color': 'white',
+						'background-color': '#f2bc1a',
+						'border': '2px solid #f2d264',
+						'border-radius': '2em'});
+				});
+			}
+			else {
+				$('.overlay-container').show();
+				$('h2').text('You Were So Close...');
+				console.log('incorrect');
+				$('#nextBtn').click(function() {
+					$('.overlay-container').hide();
+					$('.question-number').find('li:nth-child(5)').css({
+						'color': 'white',
+						'background-color': '#f2bc1a',
+						'border': '2px solid #f2d264',
+						'border-radius': '2em'});
+				});
+			} 
+		});
 	}
 
 	$('li').click(function() {
@@ -61,29 +210,8 @@ $(document).ready(function() {
 		console.log(this);
 	});	
 });
-	// var question3 = new QuizItem ("Who is Barry's archenemy?", 'Reverse-Flash', ['Captain Cold', 'The Joker', 'Sinestro']);
-	// var question4 = new QuizItem ('In what storyline does Barry die?', 'Crisis on Infinite Earths', ['Final Crisis', 'Flash: Rebirth', 'Flashpoint']);
-	// var question5 = new QuizItem ('In what publication year did Barry return to the DCU?', '2008', ['1976', '2004', '2012']);
 
 	// var randomArray = [Math.floor(Math.random()*question1.wrongAnswers.length)];
-	
-	// $('.question').text(question3.question);
-	// $('.answer').text(question3.answer);
-	// $('.wronganswer1').text(question3.wrongAnswers[0]);
-	// $('.wronganswer2').text(question3.wrongAnswers[1]);
-	// $('.wronganswer3').text(question3.wrongAnswers[2]);
-
-	// $('.question').text(question4.question);
-	// $('.answer').text(question4.answer);
-	// $('.wronganswer1').text(question4.wrongAnswers[0]);
-	// $('.wronganswer2').text(question4.wrongAnswers[1]);
-	// $('.wronganswer3').text(question4.wrongAnswers[2]);
-
-	// $('.question').text(question5.question);
-	// $('.answer').text(question5.answer);
-	// $('.wronganswer1').text(question5.wrongAnswers[0]);
-	// $('.wronganswer2').text(question5.wrongAnswers[1]);
-	// $('.wronganswer3').text(question5.wrongAnswers[2]);
 
 	// function PopUp (image, headline, bodycopy) {
 	// 	this.image = image;
