@@ -52,48 +52,48 @@ $(document).ready(function() {
 		});
 	}
 
-	// function Question2 () {
-	// 	// if ($('p').is('.selected')) {
-	// 	// 	$('p').toggleClass('.selected');
-	// 	// }
+	function Question2 () {
+		if ($('p').is('.selected')) {
+			$('p').toggleClass('.selected');
+		}
 
-	// 	var question2 = new QuizItem ('What comic did Barry first appear in?', 'Showcase #4', ['Flash Comics #1', 'Superman #199', 'Flash #167']);
+		var question2 = new QuizItem ('What comic did Barry first appear in?', 'Showcase #4', ['Flash Comics #1', 'Superman #199', 'Flash #167']);
 
-	// 	$('.question').text(question2.question);
-	// 	$('.answer').text(question2.answer);
-	// 	$('.wronganswer1').text(question2.wrongAnswers[0]);
-	// 	$('.wronganswer2').text(question2.wrongAnswers[1]);
-	// 	$('.wronganswer3').text(question2.wrongAnswers[2]);
+		$('.question').text(question2.question);
+		$('.answer').text(question2.answer);
+		$('.wronganswer1').text(question2.wrongAnswers[0]);
+		$('.wronganswer2').text(question2.wrongAnswers[1]);
+		$('.wronganswer3').text(question2.wrongAnswers[2]);
 
-	// 	$('#submitBtn').click(function() {
-	// 		if ($('.selected').is('.answer')) {
-	// 			$('.overlay-container').show();
-	// 			$('.overlay-container p').text('Barry Allen was created by Robert Kanigher, John Broome and Carmine Infantino. He made his first comic book appearance in October 1956 in the pages of Showcase #4.');
-	// 			$('#nextBtn').click(function() {
-	// 				$('.overlay-container').hide();
-	// 				$('.question-number').find('li:nth-child(3)').css({
-	// 					'color': 'white',
-	// 					'background-color': '#f2bc1a',
-	// 					'border': '2px solid #f2d264',
-	// 					'border-radius': '2em'});
-	// 				Question3();
-	// 			});
-	// 		}
-	// 		else {
-	// 			$('.overlay-container').show();
-	// 			$('h2').text('You Were So Close...');
-	// 			$('#nextBtn').click(function() {
-	// 				$('.overlay-container').hide();
-	// 				$('.question-number').find('li:nth-child(3)').css({
-	// 					'color': 'white',
-	// 					'background-color': '#f2bc1a',
-	// 					'border': '2px solid #f2d264',
-	// 					'border-radius': '2em'});
-	// 				Question3();
-	// 			});
-	// 		} 
-	// 	});
-	// }
+		$('#submitBtn').click(function() {
+			if ($('.selected').is('.answer')) {
+				$('.overlay-container').show();
+				$('.overlay-container p').text('Barry Allen was created by Robert Kanigher, John Broome and Carmine Infantino. He made his first comic book appearance in October 1956 in the pages of Showcase #4.');
+				$('#nextBtn').click(function() {
+					$('.overlay-container').hide();
+					$('.question-number').find('li:nth-child(3)').css({
+						'color': 'white',
+						'background-color': '#f2bc1a',
+						'border': '2px solid #f2d264',
+						'border-radius': '2em'});
+					Question3();
+				});
+			}
+			else {
+				$('.overlay-container').show();
+				$('h2').text('You Were So Close...');
+				$('#nextBtn').click(function() {
+					$('.overlay-container').hide();
+					$('.question-number').find('li:nth-child(3)').css({
+						'color': 'white',
+						'background-color': '#f2bc1a',
+						'border': '2px solid #f2d264',
+						'border-radius': '2em'});
+					Question3();
+				});
+			} 
+		});
+	}
 
 // 	function Question3 () {
 // 		var question3 = new QuizItem ("Who is Barry's archenemy?", 'Reverse-Flash', ['Captain Cold', 'Joker', 'Sinestro']);
