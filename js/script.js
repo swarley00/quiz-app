@@ -1,9 +1,9 @@
 $(document).ready(function() {
-	Question1();
+	Question1();	
 
-	$('li').click(function() {
-		$(this).closest('li').find('p').toggleClass('selected');
-	});	
+	$('input').click(function () {
+		console.log($(this).val());
+	});
 
 	function QuizItem (question, answer, wrongAnswers) {
 		this.question = question;
@@ -21,42 +21,47 @@ $(document).ready(function() {
 		$('.wronganswer3').text(question1.wrongAnswers[2]);
 
 		$('#submitBtn').click(function() {
-			var img1 = "<img src='images/pop-up.jpg'>";
-			if ($('.selected').is('.answer')) {
-				$('.overlay-container').show();
-				$('.pop-out').append(img1);
-				$('.overlay-container p').text('After graduating, Allen found work with the Central City Police Department as a police scientist, with a well-known habit for slowness and lateness. Working late in the lab one night, a rack of chemicals that he was working next to was struck by lightning, and Allen was doused in chemicals. Surprisingly unharmed, Allen cleaned up the mess and returned to work, but soon noticed that the world appeared to be moving much slower than normal. He soon realized that it was not the world that had slowed, but himself who had sped up.');
-				$('#nextBtn').click(function() {
-					$('.overlay-container').hide();
-					$('.question-number').find('li:nth-child(2)').css({
-						'color': 'white',
-						'background-color': '#f2bc1a',
-						'border': '2px solid #f2d264',
-						'border-radius': '2em'});
-					Question2();
-				});
+			if($('input:checked').val() === "B") {
+				alert("right answer");	
 			}
 			else {
-				$('.overlay-container').show();
-				$('h2').text('You Were So Close...');
-				$('#nextBtn').click(function() {
-					$('.overlay-container').hide();
-					$('.question-number').find('li:nth-child(2)').css({
-						'color': 'white',
-						'background-color': '#f2bc1a',
-						'border': '2px solid #f2d264',
-						'border-radius': '2em'});
-					Question2();
-				});
-			} 
+				alert("wrong answer");
+			}
+			$("input:checked").prop('checked', false);
+			Question2();
+
+			// var img1 = "<img src='images/pop-up.jpg'>";
+			// if ($('.selected').is('.answer')) {
+			// 	$('.overlay-container').show();
+			// 	$('.pop-out').append(img1);
+			// 	$('.overlay-container p').text('After graduating, Allen found work with the Central City Police Department as a police scientist, with a well-known habit for slowness and lateness. Working late in the lab one night, a rack of chemicals that he was working next to was struck by lightning, and Allen was doused in chemicals. Surprisingly unharmed, Allen cleaned up the mess and returned to work, but soon noticed that the world appeared to be moving much slower than normal. He soon realized that it was not the world that had slowed, but himself who had sped up.');
+			// 	$('#nextBtn').click(function() {
+			// 		$('.overlay-container').hide();
+			// 		$('.question-number').find('li:nth-child(2)').css({
+			// 			'color': 'white',
+			// 			'background-color': '#f2bc1a',
+			// 			'border': '2px solid #f2d264',
+			// 			'border-radius': '2em'});
+			// 		Question2();
+			// 	});
+			// }
+			// else {
+			// 	$('.overlay-container').show();
+			// 	$('h2').text('You Were So Close...');
+			// 	$('#nextBtn').click(function() {
+			// 		$('.overlay-container').hide();
+			// 		$('.question-number').find('li:nth-child(2)').css({
+			// 			'color': 'white',
+			// 			'background-color': '#f2bc1a',
+			// 			'border': '2px solid #f2d264',
+			// 			'border-radius': '2em'});
+			// 		Question2();
+			// 	});
+			// } 
 		});
 	}
 
 	function Question2 () {
-		if ($('p').is('.selected')) {
-			$('p').toggleClass('.selected');
-		}
-
 		var question2 = new QuizItem ('What comic did Barry first appear in?', 'Showcase #4', ['Flash Comics #1', 'Superman #199', 'Flash #167']);
 
 		$('.question').text(question2.question);

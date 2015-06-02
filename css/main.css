@@ -90,9 +90,9 @@ h1::before {
 	cursor: pointer;
 }
 
-.answers-container .selected {
-	color: #a31416;
-	border-color: #a31416;
+input[type=radio]:checked ~ p {
+    color: #a31416;
+    border-color: #a31416;
 }
 
 .letter {
