@@ -22,42 +22,38 @@ $(document).ready(function() {
 
 		$('#submitBtn').click(function() {
 			if($('input:checked').val() === "B") {
-				alert("right answer");	
+				console.log("right answer");
+
+				$('.overlay-container').show();	
+				$('.pop-out img').attr('src', 'images/pop-up.jpg');
+				$('.overlay-container p').text('After graduating, Allen found work with the Central City Police Department as a police scientist, with a well-known habit for slowness and lateness. Working late in the lab one night, a rack of chemicals that he was working next to was struck by lightning, and Allen was doused in chemicals. Surprisingly unharmed, Allen cleaned up the mess and returned to work, but soon noticed that the world appeared to be moving much slower than normal. He soon realized that it was not the world that had slowed, but himself who had sped up.');
+				
+				$('#nextBtn').click(function() {
+					$('.overlay-container').hide();
+					$('.question-number').find('li:nth-child(2)').css({
+						'color': 'white',
+						'background-color': '#f2bc1a',
+						'border': '2px solid #f2d264',
+						'border-radius': '2em'});
+				});
 			}
 			else {
-				alert("wrong answer");
+				console.log("wrong answer");
+
+				$('.overlay-container').show();
+				$('h2').text('You Were So Close...');
+				$('#nextBtn').click(function() {
+					$('.overlay-container').hide();
+					$('.question-number').find('li:nth-child(2)').css({
+						'color': 'white',
+						'background-color': '#f2bc1a',
+						'border': '2px solid #f2d264',
+						'border-radius': '2em'});
+				});
 			}
+
 			$("input:checked").prop('checked', false);
 			Question2();
-
-			// var img1 = "<img src='images/pop-up.jpg'>";
-			// if ($('.selected').is('.answer')) {
-			// 	$('.overlay-container').show();
-			// 	$('.pop-out').append(img1);
-			// 	$('.overlay-container p').text('After graduating, Allen found work with the Central City Police Department as a police scientist, with a well-known habit for slowness and lateness. Working late in the lab one night, a rack of chemicals that he was working next to was struck by lightning, and Allen was doused in chemicals. Surprisingly unharmed, Allen cleaned up the mess and returned to work, but soon noticed that the world appeared to be moving much slower than normal. He soon realized that it was not the world that had slowed, but himself who had sped up.');
-			// 	$('#nextBtn').click(function() {
-			// 		$('.overlay-container').hide();
-			// 		$('.question-number').find('li:nth-child(2)').css({
-			// 			'color': 'white',
-			// 			'background-color': '#f2bc1a',
-			// 			'border': '2px solid #f2d264',
-			// 			'border-radius': '2em'});
-			// 		Question2();
-			// 	});
-			// }
-			// else {
-			// 	$('.overlay-container').show();
-			// 	$('h2').text('You Were So Close...');
-			// 	$('#nextBtn').click(function() {
-			// 		$('.overlay-container').hide();
-			// 		$('.question-number').find('li:nth-child(2)').css({
-			// 			'color': 'white',
-			// 			'background-color': '#f2bc1a',
-			// 			'border': '2px solid #f2d264',
-			// 			'border-radius': '2em'});
-			// 		Question2();
-			// 	});
-			// } 
 		});
 	}
 
