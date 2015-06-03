@@ -259,6 +259,6 @@ $(document).ready(function() {
 			}
 		});
 	}
-}); //ending bracket
+});
 
 // var randomArray = [Math.floor(Math.random()*question1.wrongAnswers.length)];
