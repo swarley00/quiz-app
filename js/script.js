@@ -112,7 +112,7 @@ $(document).ready(function() {
 	}
 
 	function Question3 () {
-		var question3 = new QuizItem ("Who is Barry's archenemy?", 'Reverse-Flash', ['Captain Cold', 'Joker', 'Sinestro']);
+		var question3 = new QuizItem ("Who is Barry's archenemy?", 'Professor Zoom', ['Captain Cold', 'Joker', 'Sinestro']);
 
 		$('.question').text(question3.question);
 		$('.answer').text(question3.answer);
@@ -126,8 +126,8 @@ $(document).ready(function() {
 
 				$('.overlay-container').show();	
 				$('h2').text("You're Correct!");
-				$('.pop-out img').attr('src', 'images/'); //need image
-				$('.overlay-container p').text(''); //need text
+				$('.pop-out img').attr('src', 'images/answer3.jpg');
+				$('.overlay-container p').text("Professor Zoom was created by John Broome and Carmine Infantino for the The Flash #139. Professor Zoom would become Barry Allen's greatest enemy, referred to as 'Joker to Batman, Professor Zoom to Flash.'"); 
 				
 				$('#nextBtn').click(function() {
 					$('.overlay-container').hide();
@@ -144,8 +144,8 @@ $(document).ready(function() {
 
 				$('.overlay-container').show();
 				$('h2').text('You Were So Close...');
-				$('.pop-out img').attr('src', 'images/'); //need image
-				$('.overlay-container p').text(''); //need text
+				$('.pop-out img').attr('src', 'images/answer3.jpg');
+				$('.overlay-container p').text("Professor Zoom was created by John Broome and Carmine Infantino for the The Flash #139. Professor Zoom would become Barry Allen's greatest enemy, referred to as 'Joker to Batman, Professor Zoom to Flash.'"); 
 			
 				$('#nextBtn').click(function() {
 					$('.overlay-container').hide();
@@ -176,7 +176,7 @@ $(document).ready(function() {
 
 				$('.overlay-container').show();	
 				$('h2').text("You're Correct!");
-				$('.pop-out img').attr('src', 'images/'); //need image
+				$('.pop-out img').attr('src', 'images/answer4.jpg');
 				$('.overlay-container p').text(''); //need text
 				
 				$('#nextBtn').click(function() {
@@ -194,7 +194,7 @@ $(document).ready(function() {
 
 				$('.overlay-container').show();
 				$('h2').text('You Were So Close...');
-				$('.pop-out img').attr('src', 'images/'); //need image
+				$('.pop-out img').attr('src', 'images/answer4.jpg');
 				$('.overlay-container p').text(''); //need text
 			
 				$('#nextBtn').click(function() {
@@ -226,7 +226,7 @@ $(document).ready(function() {
 
 				$('.overlay-container').show();	
 				$('h2').text("You're Correct!");
-				$('.pop-out img').attr('src', 'images/'); //need image
+				$('.pop-out img').attr('src', 'images/answer5.jpg');
 				$('.overlay-container p').text(''); //need text
 				
 				$('#nextBtn').click(function() {
@@ -244,7 +244,7 @@ $(document).ready(function() {
 
 				$('.overlay-container').show();
 				$('h2').text('You Were So Close...');
-				$('.pop-out img').attr('src', 'images/'); //need image
+				$('.pop-out img').attr('src', 'images/answer5.jpg');
 				$('.overlay-container p').text(''); //need text
 			
 				$('#nextBtn').click(function() {
