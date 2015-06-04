@@ -26,7 +26,7 @@ $(document).ready(function() {
 
 				$('.overlay-container').show();	
 				$('h2').text("You're Correct!");
-				$('.pop-out img').attr('src', 'images/pop-up.jpg');
+				$('.pop-out img').attr('src', 'images/answer1.jpg');
 				$('.overlay-container p').text('After graduating, Allen found work with the Central City Police Department as a police scientist, with a well-known habit for slowness and lateness. Working late in the lab one night, a rack of chemicals that he was working next to was struck by lightning, and Allen was doused in chemicals. Surprisingly unharmed, Allen cleaned up the mess and returned to work, but soon noticed that the world appeared to be moving much slower than normal. He soon realized that it was not the world that had slowed, but himself who had sped up.');
 				
 				$('#nextBtn').click(function() {
@@ -44,7 +44,7 @@ $(document).ready(function() {
 
 				$('.overlay-container').show();
 				$('h2').text('You Were So Close...');
-				$('.pop-out img').attr('src', 'images/pop-up.jpg');
+				$('.pop-out img').attr('src', 'images/answer1.jpg');
 				$('.overlay-container p').text('After graduating, Allen found work with the Central City Police Department as a police scientist, with a well-known habit for slowness and lateness. Working late in the lab one night, a rack of chemicals that he was working next to was struck by lightning, and Allen was doused in chemicals. Surprisingly unharmed, Allen cleaned up the mess and returned to work, but soon noticed that the world appeared to be moving much slower than normal. He soon realized that it was not the world that had slowed, but himself who had sped up.');
 				
 				$('#nextBtn').click(function() {
@@ -76,7 +76,7 @@ $(document).ready(function() {
 
 				$('.overlay-container').show();	
 				$('h2').text("You're Correct!");
-				$('.pop-out img').attr('src', 'images/showcase4.jpg');
+				$('.pop-out img').attr('src', 'images/answer2.jpg');
 				$('.overlay-container p').text('Barry Allen was created by Robert Kanigher, John Broome and Carmine Infantino. He made his first comic book appearance in October 1956 in the pages of Showcase #4.');
 				
 				$('#nextBtn').click(function() {
@@ -94,7 +94,7 @@ $(document).ready(function() {
 
 				$('.overlay-container').show();
 				$('h2').text('You Were So Close...');
-				$('.pop-out img').attr('src', 'images/showcase4.jpg');
+				$('.pop-out img').attr('src', 'images/answer2.jpg');
 				$('.overlay-container p').text('Barry Allen was created by Robert Kanigher, John Broome and Carmine Infantino. He made his first comic book appearance in October 1956 in the pages of Showcase #4.');
 			
 				$('#nextBtn').click(function() {
