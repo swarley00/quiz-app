@@ -5,6 +5,21 @@ $(document).ready(function() {
 		console.log($(this).val());
 	});
 
+	function shuffle(array) {
+  		var currentIndex = array.length, temporaryValue, randomIndex;
+  
+  		while (0 !== currentIndex) {
+    		randomIndex = Math.floor(Math.random()*currentIndex);
+    		currentIndex -= 1;
+    
+    		temporaryValue = array[currentIndex];
+    		array[currentIndex] = array[randomIndex];
+    		array[randomIndex] = temporaryValue;
+  		}
+
+  		return array;
+	}
+
 	function QuizItem (question, answer, wrongAnswers) {
 		this.question = question;
 		this.answer = answer;
@@ -13,12 +28,19 @@ $(document).ready(function() {
 
 	function Question1 () {
 		var question1 = new QuizItem ('How does Barry Allen gain his powers?', 'Struck By Lightning', ['Kryptonite', 'An Alien Ring', 'Lab Experiments']);
-	
 		$('.question').text(question1.question);
-		$('.answer').text(question1.answer);
-		$('.wronganswer1').text(question1.wrongAnswers[0]);
-		$('.wronganswer2').text(question1.wrongAnswers[1]);
-		$('.wronganswer3').text(question1.wrongAnswers[2]);
+
+		var answers = new Array ();
+		answers[0] = 'Kryptonite';
+		answers[1] = 'Struck By Lightning';
+		answers[2] = 'An Alien Ring';
+		answers[3] = 'Lab Experiments';
+
+		shuffle(answers);
+		$('#1 .wronganswer1').text(answers[0]);
+		$('#2 .answer').text(answers[1]);
+		$('#3 .wronganswer2').text(answers[2]);
+		$('#4 .wronganswer3').text(answers[3]);
 
 		$('#submitBtn').click(function() {
 			if($('input:checked').val() === "B") {
