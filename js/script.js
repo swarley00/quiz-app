@@ -127,8 +127,8 @@ $(document).ready(function() {
 				$('.overlay-container').show();	
 				$('h2').text("You're Correct!");
 				$('.pop-out img').attr('src', 'images/answer3.jpg');
-				$('.overlay-container p').text("Professor Zoom was created by John Broome and Carmine Infantino for the The Flash #139. Professor Zoom would become Barry Allen's greatest enemy, referred to as 'Joker to Batman, Professor Zoom to Flash.'"); 
-				
+				$('.overlay-container p').text("Eobard Thawne was born in the 25th century, and eventually became the second Reverse Flash. His powers are similar to those of Barry Allen's (The Flash). However, while The Flash's powers come from his ability to tap into the Speed Force, Reverse Flash's come from his ability to tap into the negative speed force, which causes destruction. He also goes by the name Professor Zoom. He is best known for being the archenemy of Barry Allen, as well as murdering Barry's mother and his true love, Iris West."); 
+
 				$('#nextBtn').click(function() {
 					$('.overlay-container').hide();
 					$('.question-number').find('li:nth-child(4)').css({
@@ -145,8 +145,8 @@ $(document).ready(function() {
 				$('.overlay-container').show();
 				$('h2').text('You Were So Close...');
 				$('.pop-out img').attr('src', 'images/answer3.jpg');
-				$('.overlay-container p').text("Professor Zoom was created by John Broome and Carmine Infantino for the The Flash #139. Professor Zoom would become Barry Allen's greatest enemy, referred to as 'Joker to Batman, Professor Zoom to Flash.'"); 
-			
+				$('.overlay-container p').text("Eobard Thawne was born in the 25th century, and eventually became the second Reverse Flash. His powers are similar to those of Barry Allen's (The Flash). However, while The Flash's powers come from his ability to tap into the Speed Force, Reverse Flash's come from his ability to tap into the negative speed force, which causes destruction. He also goes by the name Professor Zoom. He is best known for being the archenemy of Barry Allen, as well as murdering Barry's mother and his true love, Iris West.");
+
 				$('#nextBtn').click(function() {
 					$('.overlay-container').hide();
 					$('.question-number').find('li:nth-child(4)').css({
@@ -177,7 +177,7 @@ $(document).ready(function() {
 				$('.overlay-container').show();	
 				$('h2').text("You're Correct!");
 				$('.pop-out img').attr('src', 'images/answer4.jpg');
-				$('.overlay-container p').text(''); //need text
+				$('.overlay-container p').text("As one of the only people who could travel between dimensions unassisted, Barry was captured by the Anti-Monitor and mentally tortured byPsycho-Pirate. He was able to use the Psycho-Pirate to turn all of the Anti-Monitor's servants, the Thunderers, against him. This gave him enough time to destroy the Anti-Monitor's anti-matter cannon by running around it and destroying the outer casing. He ran so incredibly fast that he entered the Speed Forceforever, saving the remaining realities. His success came at great personal cost as Barry's body was consumed by the anti-matter weapon leaving behind just his costume and ring.");
 				
 				$('#nextBtn').click(function() {
 					$('.overlay-container').hide();
@@ -195,7 +195,7 @@ $(document).ready(function() {
 				$('.overlay-container').show();
 				$('h2').text('You Were So Close...');
 				$('.pop-out img').attr('src', 'images/answer4.jpg');
-				$('.overlay-container p').text(''); //need text
+				$('.overlay-container p').text("As one of the only people who could travel between dimensions unassisted, Barry was captured by the Anti-Monitor and mentally tortured byPsycho-Pirate. He was able to use the Psycho-Pirate to turn all of the Anti-Monitor's servants, the Thunderers, against him. This gave him enough time to destroy the Anti-Monitor's anti-matter cannon by running around it and destroying the outer casing. He ran so incredibly fast that he entered the Speed Forceforever, saving the remaining realities. His success came at great personal cost as Barry's body was consumed by the anti-matter weapon leaving behind just his costume and ring.");
 			
 				$('#nextBtn').click(function() {
 					$('.overlay-container').hide();
@@ -227,7 +227,7 @@ $(document).ready(function() {
 				$('.overlay-container').show();	
 				$('h2').text("You're Correct!");
 				$('.pop-out img').attr('src', 'images/answer5.jpg');
-				$('.overlay-container p').text(''); //need text
+				$('.overlay-container p').text("Officially and permanently returned to life, the cities he once called home celebrate, while Allen contemplates why he has been brought back. Soon after he encounters Savitar, a speedster villain. He catches up to the villain, but when he touches him Savitar turns to dust, telling Allen that he was the beginning and also the end. At that moment a number of heroes who are connected to the Speed Force experience painful convulsions. Soon it is revealed that Allen is becoming the new Black Flash, and he flees to the Speed Force to avoid harming any innocents. There he encounters other heroes who tell him that becoming the Black Flash is not his fault, and soon Professor Zoom, appears, revealing that he was responsible not only for Allen's resurrection, but also a number of tragedies in his life, including the murder of his mother.");
 				
 				$('#nextBtn').click(function() {
 					$('.overlay-container').hide();
@@ -245,7 +245,7 @@ $(document).ready(function() {
 				$('.overlay-container').show();
 				$('h2').text('You Were So Close...');
 				$('.pop-out img').attr('src', 'images/answer5.jpg');
-				$('.overlay-container p').text(''); //need text
+				$('.overlay-container p').text("Officially and permanently returned to life, the cities he once called home celebrate, while Allen contemplates why he has been brought back. Soon after he encounters Savitar, a speedster villain. He catches up to the villain, but when he touches him Savitar turns to dust, telling Allen that he was the beginning and also the end. At that moment a number of heroes who are connected to the Speed Force experience painful convulsions. Soon it is revealed that Allen is becoming the new Black Flash, and he flees to the Speed Force to avoid harming any innocents. There he encounters other heroes who tell him that becoming the Black Flash is not his fault, and soon Professor Zoom, appears, revealing that he was responsible not only for Allen's resurrection, but also a number of tragedies in his life, including the murder of his mother.");
 			
 				$('#nextBtn').click(function() {
 					$('.overlay-container').hide();
@@ -260,5 +260,3 @@ $(document).ready(function() {
 		});
 	}
 });
-
-// var randomArray = [Math.floor(Math.random()*question1.wrongAnswers.length)];
