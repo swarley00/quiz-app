@@ -31,10 +31,10 @@ $(document).ready(function() {
 		$('.question').text(question1.question);
 
 		var answers = new Array ();
-		answers[0] = '<p class="wronganswer1">Kryptonite</p>';
-		answers[1] = '<p class="answer">Struck By Lightning</p>';
-		answers[2] = '<p class="wronganswer2">An Alien Ring</p>';
-		answers[3] = '<p class="wronganswer3">Lab Experiments</p>';
+		answers[0] = '<p class="wronganswer1">' + question1.wrongAnswers[0] + '</p>';
+		answers[1] = '<p class="answer">' + question1.answer + '</p>';
+		answers[2] = '<p class="wronganswer2">' + question1.wrongAnswers[1] + '</p>';
+		answers[3] = '<p class="wronganswer3">' + question1.wrongAnswers[2] + '</p>';
 
 		shuffle(answers);
 		$('#1').append(answers[0]);
