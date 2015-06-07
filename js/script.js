@@ -31,16 +31,16 @@ $(document).ready(function() {
 		$('.question').text(question1.question);
 
 		var answers = new Array ();
-		answers[0] = 'Kryptonite';
-		answers[1] = 'Struck By Lightning';
-		answers[2] = 'An Alien Ring';
-		answers[3] = 'Lab Experiments';
+		answers[0] = '<p class="wronganswer1">Kryptonite</p>';
+		answers[1] = '<p class="answer">Struck By Lightning</p>';
+		answers[2] = '<p class="wronganswer2">An Alien Ring</p>';
+		answers[3] = '<p class="wronganswer3">Lab Experiments</p>';
 
 		shuffle(answers);
-		$('#1 .wronganswer1').text(answers[0]);
-		$('#2 .answer').text(answers[1]);
-		$('#3 .wronganswer2').text(answers[2]);
-		$('#4 .wronganswer3').text(answers[3]);
+		$('#1').append(answers[0]);
+		$('#2').append(answers[1]);
+		$('#3').append(answers[2]);
+		$('#4').append(answers[3]);
 
 		$('#submitBtn').click(function() {
 			if($('input:checked').val() === "B") {
@@ -279,6 +279,7 @@ $(document).ready(function() {
 					$("input:checked").prop('checked', false);
 				});
 			}
+			Question1();
 		});
 	}
 });
