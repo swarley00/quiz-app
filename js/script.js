@@ -30,20 +30,35 @@ $(document).ready(function() {
 		var question1 = new QuizItem ('How does Barry Allen gain his powers?', 'Struck By Lightning', ['Kryptonite', 'An Alien Ring', 'Lab Experiments']);
 		$('.question').text(question1.question);
 
-		var answers = new Array ();
-		answers[0] = '<p class="wronganswer1">' + question1.wrongAnswers[0] + '</p>';
-		answers[1] = '<p class="answer">' + question1.answer + '</p>';
-		answers[2] = '<p class="wronganswer2">' + question1.wrongAnswers[1] + '</p>';
-		answers[3] = '<p class="wronganswer3">' + question1.wrongAnswers[2] + '</p>';
+		var answers = [question1.answer, question1.wrongAnswers[0], question1.wrongAnswers[1], question1.wrongAnswers[2]];
+		// answers[0] = '<p class="wronganswer1">' + question1.wrongAnswers[0] + '</p>';
+		// answers[1] = '<p class="answer">' + question1.answer + '</p>';
+		// answers[2] = '<p class="wronganswer2">' + question1.wrongAnswers[1] + '</p>';
+		// answers[3] = '<p class="wronganswer3">' + question1.wrongAnswers[2] + '</p>';
 
+		console.log(answers);
 		shuffle(answers);
-		$('#1').append(answers[0]);
-		$('#2').append(answers[1]);
-		$('#3').append(answers[2]);
-		$('#4').append(answers[3]);
+
+		$('#1 .answer-text').text(answers[0]);
+		$('#1 input').val(answers[0]);
+
+		$('#2 .answer-text').text(answers[1]);
+		$('#2 input').val(answers[1]);
+
+		$('#3 .answer-text').text(answers[2]);
+		$('#3 input').val(answers[2]);
+
+		$('#4 .answer-text').text(answers[3]);
+		$('#4 input').val(answers[3]);
+
+		// shuffle(answers);
+		// $('#1').append(answers[0]);
+		// $('#2').append(answers[1]);
+		// $('#3').append(answers[2]);
+		// $('#4').append(answers[3]);
 
 		$('#submitBtn').click(function() {
-			if($('input:checked').val() === "B") {
+			if($('input:checked').val() === question1.answer) {
 				console.log("right answer");
 
 				$('.overlay-container').show();	
@@ -53,11 +68,11 @@ $(document).ready(function() {
 				
 				$('#nextBtn').click(function() {
 					$('.overlay-container').hide();
-					$('.question-number').find('li:nth-child(2)').css({
-						'color': 'white',
-						'background-color': '#f2bc1a',
-						'border': '2px solid #f2d264',
-						'border-radius': '2em'});
+					//$('.question-number').find('li:nth-child(2)').css({
+					// 	'color': 'white',
+					// 	'background-color': '#f2bc1a',
+					// 	'border': '2px solid #f2d264',
+					// 	'border-radius': '2em'});
 					$("input:checked").prop('checked', false);
 				});
 			}
@@ -71,14 +86,15 @@ $(document).ready(function() {
 				
 				$('#nextBtn').click(function() {
 					$('.overlay-container').hide();
-					$('.question-number').find('li:nth-child(2)').css({
-						'color': 'white',
-						'background-color': '#f2bc1a',
-						'border': '2px solid #f2d264',
-						'border-radius': '2em'});
+					// $('.question-number').find('li:nth-child(2)').css({
+					// 	'color': 'white',
+					// 	'background-color': '#f2bc1a',
+					// 	'border': '2px solid #f2d264',
+					// 	'border-radius': '2em'});
 					$("input:checked").prop('checked', false);
 				});
 			}
+			$('.question-number').find('li:nth-child(2)').addClass('active-number');
 			Question2();
 		});
 	}
