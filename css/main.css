@@ -182,7 +182,10 @@ hr {
 }
 
 .active-number {
-	color: black !important;
+	color: white !important;
+	background-color: #f2bc1a !important;
+	border: 2px solid #f2d264 !important;
+	border-radius: 2em !important;
 }
 
 /**** Pop-up Box and Faded Background ****/
@@ -234,6 +237,10 @@ h2 {
 	font-size: 2.250em;
 }
 
-.pop-out .next {
+.startover {
+	display: none;
+}
+
+.pop-out .next, .pop-out .startover {
 	margin-top: 1.2em;
 }
