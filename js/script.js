@@ -1,5 +1,4 @@
 $(document).ready(function() {
-	Question1();	
 
 	function QuizItem (question, answer, wrongAnswers) {
 		this.question = question;
@@ -23,34 +22,30 @@ $(document).ready(function() {
 			$('#4 .answer-text').text(this.answers[3]);
 			$('#4 input').val(this.answers[3]);
 		}
+
+		this.check = function() {
+			if($('input:checked').val() === answer) {
+				console.log("right answer");
+			} else {
+				console.log("wrong answer");
+			}
+		}
 	}
 
-	function Question1 () {
-		var question1 = new QuizItem ('How does Barry Allen gain his powers?', 'Struck By Lightning', ['Kryptonite', 'An Alien Ring', 'Lab Experiments']);
-		question1.build();
-	}
+	var question1 = new QuizItem ('How does Barry Allen gain his powers?', 'Struck By Lightning', ['Kryptonite', 'An Alien Ring', 'Lab Experiments']);
+	var question2 = new QuizItem ('What comic did Barry first appear in?', 'Showcase #4', ['Flash Comics #1', 'Superman #199', 'Flash #167']);
+	var question3 = new QuizItem ("Who is Barry's archenemy?", 'Professor Zoom', ['Captain Cold', 'Joker', 'Sinestro']);
+	var question4 = new QuizItem ('In what storyline does Barry die?', 'Crisis on Infinite Earths', ['Final Crisis', 'Flash: Rebirth', 'Flashpoint']);
+	var question5 = new QuizItem ('In what publication year did Barry return to the DCU?', '2008', ['1976', '2004', '2012']);
 
-	function Question2 () {
-		var question2 = new QuizItem ('What comic did Barry first appear in?', 'Showcase #4', ['Flash Comics #1', 'Superman #199', 'Flash #167']);
-		question2.build();	
-	}
+	var questions = [question1, question2, question3, question4, question5]
+	var place = 0;
 
-	function Question3 () {
-		var question3 = new QuizItem ("Who is Barry's archenemy?", 'Professor Zoom', ['Captain Cold', 'Joker', 'Sinestro']);
-		question3.build();
-	}
+	questions[place].build();
 
-	function Question4 () {
-		var question4 = new QuizItem ('In what storyline does Barry die?', 'Crisis on Infinite Earths', ['Final Crisis', 'Flash: Rebirth', 'Flashpoint']);
-		question4.build();
-	}
-
-	function Question5 () {
-		var question5 = new QuizItem ('In what publication year did Barry return to the DCU?', '2008', ['1976', '2004', '2012']);
-		question5.build();
-	}
-
-	$('#submitBtn').click() {
-
-	}
+	$('#submitBtn').click(function() {
+		questions[place].check();
+		place++;
+		questions[place].build();
+	});
 });
