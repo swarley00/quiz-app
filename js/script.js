@@ -63,11 +63,10 @@ $(document).ready(function() {
 
 	function Question5 () {
 		var question5 = new QuizItem ('In what publication year did Barry return to the DCU?', '2008', ['1976', '2004', '2012']);
-		
 		question5.build();
 	}
 
 	$('#submitBtn').click() {
-		
+
 	}
 });
