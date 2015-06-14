@@ -27,23 +27,7 @@ $(document).ready(function() {
 
 	function Question1 () {
 		var question1 = new QuizItem ('How does Barry Allen gain his powers?', 'Struck By Lightning', ['Kryptonite', 'An Alien Ring', 'Lab Experiments']);
-
 		question1.build();
-
-		console.log(question1.answer);
-
-		$('#submitBtn').click(function() {
-			if($('input:checked').val() === question1.answer) {
-				console.log("right answer");
-			}
-			else {
-				console.log("wrong answer");
-
-			}
-
-			$("input:checked").prop('checked', false);
-			Question2();
-		});
 	}
 
 	function Question2 () {
