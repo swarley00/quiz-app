@@ -231,6 +231,15 @@ hr {
 	margin-top: .8em;
 }
 
+@media screen and (min-width: 1439px) {
+	.copy {
+		position: absolute;
+		left: 27.3em;
+		bottom: -.5em;
+		padding-right: 3em; 
+	}
+}
+
 h2 {
 	color: #e5583c;
 	font-family: 'Cambay', sans-serif;

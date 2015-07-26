@@ -6,6 +6,7 @@ $(document).ready(function() {
 		this.wrongAnswers = wrongAnswers;
 
 		this.answers = [this.answer, this.wrongAnswers[0], this.wrongAnswers[1], this.wrongAnswers[2]];
+		shuffle(this.answers);
 
 		this.build = function () {
 			$('.question').text(this.question);
@@ -81,7 +82,7 @@ $(document).ready(function() {
 	$('#startoverBtn').click(function() {
 		$('.overlay-container').hide();
 		$("input:checked").prop('checked', false);
-		$('.question-number').find(questionNumbers[0]).removeClass('active-number');
+		$('.question-number li').removeClass('active-number');
 	});
 
 	function modal() {
@@ -96,4 +97,19 @@ $(document).ready(function() {
 		place = 0;
 		questions[place].build();
 	}
+
+	function shuffle(array) {
+      var currentIndex = array.length, temporaryValue, randomIndex;
+  
+      while (0 !== currentIndex) {
+        randomIndex = Math.floor(Math.random()*currentIndex);
+        currentIndex -= 1;
+    
+        temporaryValue = array[currentIndex];
+        array[currentIndex] = array[randomIndex];
+        array[randomIndex] = temporaryValue;
+      }
+
+      return array;
+  	}
 });
