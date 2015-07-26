@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<link rel="stylesheet" type="text/css" href="css/reset.css">
+	<link rel="stylesheet" type="text/css" href="css/main.css">
+	<link href='http://fonts.googleapis.com/css?family=Racing+Sans+One|Cambay:400,700' rel='stylesheet' type='text/css'>
+	<script src="http://code.jquery.com/jquery-latest.min.js"></script>
+	<script type="text/javascript" src="js/script.js"></script>
+	<title>The Flash Quiz App</title>
+</head>
+<body>
+	<header class="masthead">
+		<div class="title">
+			<h1>The Flash Quiz</h1>
+			<p>How Well Do You Know Barry Allen?</p>
+		</div>
+	</header>	
+	<form class="questions-container">
+		<div class="content-container">
+			<p class="question"></p>
+			<div class="answers-container">
+				<ul>
+					<li class="hover">
+						<label id="1">
+							<input type="radio" name="q1" value="A">
+							<p class="letter">A</p>
+							<p class="answer-text"></p>
+							<hr>
+						</label>
+					</li>
+					<li class="hover">
+						<label id="2">
+							<input type="radio" name="q1" value="B">
+							<p class="letter">B</p>
+							<p class="answer-text"></p>
+							<hr>
+						</label>
+					</li>
+					<li class="hover">
+						<label id="3">
+							<input type="radio" name="q1" value="C">
+							<p class="letter">C</p>
+							<p class="answer-text"></p>
+							<hr>
+						</label>
+					</li>
+					<li class="hover">
+						<label id="4">
+							<input type="radio" name="q1" value="D">
+							<p class="letter">D</p>
+							<p class="answer-text"></p>
+						</label>
+					</li>
+				</ul>
+			</div>	
+			<button class="button" id="submitBtn" type="button">Submit</button>
+		</div>
+		<ul class="question-number">
+			<li>1</li>
+			<li>2</li>
+			<li>3</li>
+			<li>4</li>
+			<li>5</li>
+		</ul>
+	</form>
+	<div class="overlay-container">
+		<div class="pop-out">
+			<img src="">
+			<div class="copy">
+				<h2></h2>
+				<p></p>
+				<button class="button next" id="nextBtn">Next</button>
+				<button class="button startover" id="startoverBtn">Restart</button>
+			</div>
+		</div>
+	</div>
+</body>
+</html>

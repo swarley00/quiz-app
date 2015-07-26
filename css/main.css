@@ -1,0 +1,246 @@
+* {
+	box-sizing: border-box;
+	-webkit-font-smoothing: antialiased;
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	background-image: url('../images/main-background.jpg');
+	background-size: cover;
+	background-repeat: no-repeat; 
+	background-color: black;
+}
+
+p {
+	color: white;
+	font-family: 'Cambay', sans-serif;
+	font-size: 1.125em;
+}
+
+.title {
+	margin: 0 auto;
+	text-align: center;
+	padding: 1.75em;
+}
+
+h1 {
+	position: relative;
+	color: #fbec51;
+	font-family: 'Racing Sans One', cursive;
+	font-size: 4em;
+	padding-bottom: .25em;
+	background: -webkit-linear-gradient(#fbec51, #fcfeb7, #fbec51);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+}
+
+h1::before {
+	content: 'The Flash Quiz';
+	text-align: center;
+	-webkit-text-stroke: #e5583c 2px;
+	position: absolute;
+	z-index: -1;
+}
+
+.content-container {
+	margin: 0 auto;
+	width: 90%;
+}
+
+.question {
+	padding: .75em 0;
+	font-size: 1.750em;
+	text-shadow: 2px 2px 4px rgba(36, 10, 5, .4);
+}
+
+.questions-container {
+	margin: 0 auto;
+	background-image: url('../images/questions-background.png');
+	background-color: #d2421f;
+	background-blend-mode: multiply;
+	background-size: cover;
+	border: 2px solid #e5583c;
+	width: 60%;
+	min-width: 55em;
+	border-radius: 3px 3px 3px 3px;
+	-moz-border-radius: 3px 3px 3px 3px;
+	-webkit-border-radius: 3px 3px 3px 3px;
+	position: relative;
+}
+
+.answers-container {
+	margin: 0 auto;
+	background-color: white;
+	border: 1px solid #e5583c;
+	border-radius: 3px 3px 3px 3px;
+	-moz-border-radius: 3px 3px 3px 3px;
+	-webkit-border-radius: 3px 3px 3px 3px;
+}
+
+.answers-container p {
+	color: #e5583c;
+	font-size: 1.5em;
+	position: relative;
+}
+
+.hover:hover p {
+	color: #a31416;
+	border-color: #a31416;
+	cursor: pointer;
+}
+
+input[type=radio]:checked ~ p {
+    color: #a31416;
+    border-color: #a31416;
+}
+
+input[type=checkbox]:not(old),
+input[type=radio]:not(old){
+  	margin: 0;
+  	padding: 0;
+  	opacity: 0;
+  	width: 0;
+}
+
+.letter {
+	text-align: center;
+	line-height: 2.2em;
+	color: #e5583c;
+	font-size: 1.5em;
+	font-weight: bold;
+	width: 2em;
+	height: 2em;
+	border: 2px solid #e5583c;
+	border-radius: 2em;
+	margin-left: 1em;
+	margin-top: .75em;
+}
+
+.answer-text  {
+	left: 4em;
+	bottom: 1.3em;
+}
+
+hr {
+	border: 0;
+	height: 0;
+	border-top: 1px solid rgba(229,88,60,.2); 
+}
+
+.button {
+	font-family: 'Cambay', sans-serif;
+	font-weight: bold;
+	font-size: 1.125em;
+	text-transform: uppercase;
+	color: white;
+	background-color: #f2bc1a;
+	border: 1px solid #f2d264;
+	width: 100px;
+	height: 40px;
+	border-radius: 3px 3px 3px 3px;
+	-moz-border-radius: 3px 3px 3px 3px;
+	-webkit-border-radius: 3px 3px 3px 3px;
+	padding-top: 5px;
+	margin: 1.75em 0;
+}
+
+.button:hover {
+	color: white;
+	background-color: #dd901a;
+	cursor: pointer;
+}
+
+.question-number {
+	position: absolute;
+	right: -2em;
+	top: 48%;
+	transform: translateY(-50%); 
+}
+
+.question-number li {
+	font-family: 'Cambay', sans-serif;
+	font-weight: bold;
+	font-size: 1.875em;
+	font-weight: bold;
+	text-align: center;
+	line-height: 1.5em;
+	color: #e5583c;
+	background-color: white;
+	width: 1.5em;
+	height: 1.5em;
+	border: 2px solid #e5583c;
+	border-radius: 2em;
+	margin: .25em;
+}
+
+.question-number li:first-child {
+	color: white;
+	background-color: #f2bc1a;
+	border: 2px solid #f2d264;
+	border-radius: 2em;
+}
+
+.active-number {
+	color: white !important;
+	background-color: #f2bc1a !important;
+	border: 2px solid #f2d264 !important;
+	border-radius: 2em !important;
+}
+
+/**** Pop-up Box and Faded Background ****/
+
+.overlay-container {
+	display: none;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0, 0, 0, .9);
+	background-blend-mode: multiply;
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 1;
+}
+
+.pop-out {
+	position: relative;
+	margin: 0 auto;
+	width: 60%;
+	min-width: 55em;
+	padding: 5em;
+	background-color: white;
+	border: 2px solid #e5583c; 
+	border-radius: 3px 3px 3px 3px;
+	-moz-border-radius: 3px 3px 3px 3px;
+	-webkit-border-radius: 3px 3px 3px 3px;
+	top: 50%;
+	transform: translateY(-50%);
+}
+
+.copy {
+	position: absolute;
+	left: 27.3em;
+	bottom: 3.3em;
+	padding-right: 3em; 
+}
+
+.copy p {
+	color: #808080;
+	font-size: 0.875em;
+	line-height: 1.25em;
+	margin-top: .8em;
+}
+
+h2 {
+	color: #e5583c;
+	font-family: 'Cambay', sans-serif;
+	font-size: 2.250em;
+}
+
+.startover {
+	display: none;
+}
+
+.pop-out .next, .pop-out .startover {
+	margin-top: 1.2em;
+}
